@@ -1,18 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.androidapp.fidel.a23102_castro_examen02.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/createGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:text="CREATE GAME" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/boardNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/authorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/boardNameText"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LADDERS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_below="@+id/authorText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/ladderBeginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ladderDestinationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ladderBeginText"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/snakeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SNAKES"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_below="@+id/ladderDestinationText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/snakesBeginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ladderDestinationText"
+        android:layout_below="@+id/snakeTextView"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/snakeDestinationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/snakesBeginText"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="BOARD"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/boardNameText"
+        android:layout_alignBottom="@+id/boardNameText"
+        android:layout_marginStart="29dp"
+        android:layout_toEndOf="@+id/boardNameText"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    <TextView
+        android:id="@+id/uthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_alignBaseline="@+id/authorText"
+        android:layout_alignBottom="@+id/authorText"
+        android:layout_alignStart="@+id/textView7" />
+
+    <Button
+        android:id="@+id/ladderDestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ladderBeginButton"
+        android:layout_below="@+id/ladderBeginButton"
+        android:text="Add dest"
+        android:layout_alignEnd="@+id/ladderBeginButton" />
+
+    <Button
+        android:id="@+id/ladderBeginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ladderDestinationText"
+        android:layout_alignStart="@+id/uthText"
+        android:layout_alignTop="@+id/ladderBeginText"
+        android:text="Add Begin" />
+
+    <Button
+        android:id="@+id/snakeBeginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/snakeDestinationText"
+        android:layout_alignEnd="@+id/ladderDestButton"
+        android:layout_below="@+id/snakeTextView"
+        android:text="Add begin" />
+
+    <Button
+        android:id="@+id/snakeDestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/snakeDestinationText"
+        android:layout_alignStart="@+id/snakeBeginButton"
+        android:layout_below="@+id/snakeBeginButton"
+        android:text="add dest"
+        android:layout_alignEnd="@+id/snakeBeginButton" />
+
+    <Button
+        android:id="@+id/getBoardBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="Get Board" />
+
+</RelativeLayout>
